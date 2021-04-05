@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(90,90,90);
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(200,200,200);
+  padding: 1rem;
+
+  #top {
+    text-align: center;
+    #title {
+      font-family: 'Share Tech Mono', monospace;
+      text-transform: uppercase;
+    }
+    #description {
+      font-size: 1.1rem;
+    }
+  }
+
+  #survey-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    .input {
+      position: relative;
+      margin-bottom: 1.2rem;
+
+      input {
+        width:100%;
+        height: 1.5rem;
+
+        &:active, &:focus, &:valid {
+          ~ label {
+            top: -1.2rem;
+            left: .3rem;
+            font-size: .9rem;
+            color: black;
+          }
+        }
+
+        &[type="email"] {
+          &:not(:placeholder-shown) {
+            ~ label {
+              top: -1.2rem;
+              left: .3rem;
+              font-size: .9rem;
+              color: black;
+            }
+            &:invalid {
+              color: red;
+              ~ label {
+                color: red;
+              }
+            }
+          }
+        }
+
+        &[type="number"] {
+          &:not(:placeholder-shown) {
+            ~ label {
+              top: -1.2rem;
+              left: .3rem;
+              font-size: .9rem;
+              color: black;
+            }
+            &:out-of-range, &:invalid {
+              color: red;
+              ~ label {
+                color: red;
+              }
+            }
+          }
+        }
+      }
+      label {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        color: rgba(0,0,0,.6);
+        line-height: 1.5rem;
+        pointer-events: none;
+        transition: all .3s;
+        font-size: 1.1rem;
+      }
+    }
+    .group {
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: .5rem;
+      }
+
+      .option-group {
+        margin-left: 1rem;
+      }
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      select {
+        width:100%;
+        height: 1.5rem;
+      }
+    }
+
+    #comment {
+      width: 100%;
+      resize: none;
+      padding: .3rem;
+    }
+
+    button {
+      align-self: center;
+      height: 3rem;
+      width: 10rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-family: 'Share Tech Mono', monospace;
+    }
+  }
+
+}

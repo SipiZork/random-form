@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>Csodálatos Űrlap 1.0</title>
+</head>
+<body>
+  <div class="container">
+    <div id="top">
+      <h1 id="title">Csodálatos Űrlap 1.0</h1>
+      <p id="description">Ez a leírás mindent elmond neked, amire csak szükséged lehed.</p>
+    </div>
+    <div id="errors"></div>
+    <form id="survey-form">
+      <div class="input">
+        <input type="text" id="name" name="name" required autocomplete="off">
+        <label>Felhasználónév</label>
+        <div class="check"></div>
+      </div>
+      <div class="input">
+        <input type="email" id="email" name="email" required autocomplete="off"  placeholder=" ">
+        <label>Email cím</label>
+        <div class="check"></div>
+      </div>
+      <div class="input">
+        <input type="number" id="number" name="number" min="0" max="5" placeholder=" " required autocomplete="off">
+        <label>Valami szám</label>
+        <div class="check"></div>
+      </div>
+      <div class="group">
+        <p>Választható mező</p>
+        <select id="dropdown">
+          <option name="1" value="1">Voluptate, totam!</option>
+          <option name="2" value="2">Lorem, ipsum dolor.</option>
+          <option name="3" value="3">Laudantium nostrum et a eum ipsum facere eos.</option>
+          <option name="4" value="4">At magni perferendis maxime fuga voluptate, ducimus.</option>
+        </select>
+      </div>
+      <div class="group">
+        <p>Nemed</p>
+        <div class="option-group">
+          <input type="radio" id="male" name="gender">
+          <label for="male">Férfi</label>
+        </div>
+        <div class="option-group">
+          <input type="radio" id="female" name="gender">
+          <label for="female">Nő</label>
+        </div>
+        <div class="option-group">
+          <input type="radio" id="other" name="gender">
+          <label for="other">A további végtelen lehetőségből egy másik</label>
+        </div>
+      </div>
+      <div class="group">
+        <p>Mivel járnál?</p>
+        <div class="option-group">
+          <input type="checkbox" name="option1" id="option1" value="Autó">
+          <label for="option1">Autó</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="option2" id="option2" value="Motor">
+          <label for="option2">Motor</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="option3" id="option3" value="Repülő szönyeg">
+          <label for="option3">Repülő szönyeg</label>
+        </div>
+      </div>
+      <div class="group">
+        <p>Megjegyzés</p>
+        <textarea name="comment" id="comment" rows="6" placeholder="Ide írhatod a megjegyzésed"></textarea>
+      </div>
+      <button type="submit">Elküldés</button>
+    </form>
+  </div>
+</body>
+</html>
